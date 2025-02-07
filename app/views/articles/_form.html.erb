@@ -1,9 +1,13 @@
-<%= form_with model: @article do |f| %>
-  <%= f.label :title %>
-  <%= f.text_area :title %>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+  <%= form_with model: @article, html: { class: "form-group field" } do |f| %>
+    <div class="mb-3">
+      <%= f.label :title %>
+      <%= f.text_area :title %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
